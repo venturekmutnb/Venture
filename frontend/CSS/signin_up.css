@@ -1,0 +1,266 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden;  
+    margin: 0;
+    padding: 0;
+}
+
+/* Sign in */
+.signinpage {
+    display: flex;
+    min-height: 100vh;
+}
+
+.signinimage {
+    flex: 1;
+}
+
+.signinimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+.signinform {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 60px;
+    background: #fff;
+    box-shadow: -2px 0 12px rgba(0,0,0,.08);
+}
+
+.signinti {
+    margin: 0 0 6px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.signinsub {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 50px;
+}
+
+.signindetail { 
+    margin-bottom: 14px; 
+}
+
+.formlabel {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #374151;
+}
+
+.forminput {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font: inherit;
+    box-sizing: border-box; 
+}
+
+.btnsignin {
+    width: 100%;            
+    height: 44px;
+    border: none;
+    border-radius: 8px;
+    background: #111827;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.signinoptions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.signinoptions p {
+    margin: 0;
+}
+
+.formlink { 
+    color: #1a56ff; 
+    text-decoration: none; 
+}
+
+.formlink:hover { 
+    text-decoration: underline; 
+}
+
+/* Sign up */
+.signuppage{
+    display: flex;
+    min-height: 100vh;   
+}
+
+.imagesignup {
+    flex: 1;
+}
+
+.imagesignup img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.signupform {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 60px;           
+    background: #fff;             
+    box-shadow: -2px 0 12px rgba(0,0,0,.08);
+}
+
+.signupti {
+    margin: 0 0 6px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.signupsub {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;               
+    margin-bottom: 20px;
+}
+
+.signupdetail {
+    margin-bottom: 14px;
+}
+
+.signuplabel {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #374151;               
+}
+
+.signupinput {
+    width: 100%;                 
+    height: 44px;                
+    padding: 0 12px;
+    border: 1px solid #d1d5db;    
+    border-radius: 8px;           
+    font: inherit;               
+    box-sizing: border-box;
+}
+
+.signupinput:focus {
+    outline: none;               
+    border-color: #1a56ff;       
+    box-shadow: 0 0 0 2px rgba(26,86,255,.15); 
+}
+
+.signupbutton {
+    margin-top: 15px;
+}
+
+.btnsignin {
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 8px;
+    background: #111827;         
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.haveaccount {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.formlink {
+    color: #1a56ff;              
+    text-decoration: none;
+}
+
+.formlink:hover {
+    text-decoration: underline;   
+}
+
+.signinpage, .signuppage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.signinimage, .imagesignup {
+    width: 100%;
+    height: 250px;
+    flex: none;
+}
+
+.signinimage img, .imagesignup img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.signinform, .signupform {
+    flex: none;
+    width: 100%;
+    padding: 24px 20px;
+    box-shadow: none;
+    justify-content: flex-start;
+    box-sizing: border-box; 
+}
+
+.forminput, .signupinput {
+    width: 100%;
+    max-width: 100%;         
+    box-sizing: border-box;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+    .signinpage, .signuppage {
+        flex-direction: row;
+    }
+
+    .signinimage, .imagesignup {
+        flex: 1;
+        height: auto;
+        width: 100vw;      
+        margin-left: calc(-50vw + 50%);
+    }
+
+    .signinform, .signupform {
+        flex: 1;
+        padding: 40px 60px;
+        box-shadow: -2px 0 12px rgba(0, 0, 0, 0.08);
+        box-sizing: border-box; 
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    .signinform, .signupform {
+        padding: 60px 80px;
+    }
+
+    .signinimage img, .imagesignup img {
+        height: 100vh;
+        object-fit: cover;
+    }
+}

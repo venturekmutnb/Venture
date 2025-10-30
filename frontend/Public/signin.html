@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to Venture Tour</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/signin_up.css">
+</head>
+<body>
+    <section class="signinpage">
+        <div class="signinimage">
+            <img src="../Pics/signin.jpg" alt="Travel Image">
+        </div>
+
+        <div class="signinform">
+            <h1 class="signinti">Sign in</h1>
+            <p class="signinsub">Welcome back to Venture Tour</p>
+
+            <form id="login" action="../../backend/signin.php" method="post">
+                <div class="signindetail">
+                    <label class="formlabel">Username</label>
+                    <input class="forminput" type="text" name="username" id="username" required>
+                </div>
+                
+
+                <div class="signindetail">
+                    <label class="formlabel">Password</label>
+                    <input class="forminput" type="password" name="password" id="pass" required>
+                </div>
+
+                <div class="signinbutton">
+                    <button class="btnsignin" type="submit">Sign in</button>
+                </div>
+
+                <div class="signinoptions">
+                    <p class="signinforgot">
+                        <a class="formlink" href="../Public/forgotPass.html">Forgot Password?</a>
+                    </p>
+
+                    <p class="signingotosignup">
+                        <a class="formlink" href="../Public/signup.html">Sign up</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="../client-script/signin.js" defer></script>
+</body>
+</html>

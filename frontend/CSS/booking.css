@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.packageInfo {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    width: 100%;
+    max-width: 640px;
+    margin: 20px auto;
+    padding: 0 10px;
+    overflow-x: hidden;
+}
+
+.leftCol, .rightCol {
+    width: 100%;
+}
+
+.leftCol, .rightCol {
+    width: 100%;
+}
+
+.showPackage, 
+.summary, 
+.travelers {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-top: 20px;
+}
+
+.showPackage h2 {
+    margin-top: 0;
+}
+
+.peopleCount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.quan {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quan button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fafafa;
+    cursor: pointer;
+}
+
+.quan button:hover {
+    background: #eee;
+}
+
+.quan input {
+    width: 55px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.summary h2 {
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.sumBox {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pricePer, .quanTra, .sumTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#loadMessage {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+    text-align: right;
+}
+
+.travelerForm {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    background: #fafafa;
+}
+
+.travelerForm h3 {
+    margin: 0 0 10px;
+}
+
+.travelerForm label {
+    display: block;
+    margin: 6px 0 3px;
+    font-weight: 500;
+}
+
+.travelerForm input,
+.travelerForm select {
+    width: 100%;
+    height: 38px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.btngroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 15px;
+    background: #f5f5f5;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #e5e5e5;
+}
+
+.quan {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quan button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.quan input[type="number"] {
+    width: 50px;
+    height: 32px;               
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.quan input::-webkit-inner-spin-button,
+.quan input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.travelerForm > label {
+    font-weight: 600;
+    color: #374151;
+}
+
+/* Taplet */
+@media (min-width: 768px) {
+    .packageInfo {
+        flex-direction: row;      
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 960px;
+        gap: 24px;
+    }
+
+    .leftCol {
+        flex: 1.2;
+    }
+
+    .rightCol {
+        flex: 1.6;
+    }
+
+    .btngroup {
+        justify-content: space-between;
+    }
+
+    .btn {
+        flex: 0 0 auto;             
+        min-width: 70px;
+        height: 46px;
+        font-size: 15px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .packageInfo {
+        max-width: 1120px;
+        gap: 32px;
+    }
+
+    .btn {
+        flex: 0 0 auto;
+        min-width: 70px;
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .btngroup {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

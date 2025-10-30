@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Segoe UI, Helvetica, sans-serif
+}
+
+body {
+    display: flex;
+    background: #f2f4f7
+}
+
+#sidebar-container {
+    width: 250px
+}
+
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    width: 100%
+}
+
+.card {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05)
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px
+}
+
+.row label {
+    width: 140px;
+    font-weight: 600
+}
+
+.row input,
+.row textarea,
+.row select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px
+}
+
+th,
+td {
+    padding: 8px;
+    border: 1px solid #eee;
+    text-align: left
+}
+
+button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 0;
+    background: #2b6cb0;
+    color: white;
+    cursor: pointer
+}
+
+button.danger {
+    background: #d9534f
+}
+
+#plansContainer .plan {
+    border: 1px dashed #ccc;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 6px
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999
+}
+
+.modal-content {
+    background: #fff;
+    width: 600px;
+    margin: 6% auto;
+    padding: 16px;
+    border-radius: 8px;
+    position: relative
+}
+
+.close {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    cursor: pointer;
+    font-size: 20px
+}
+
+/* Responsive Design*/
+@media (max-width: 1024px) {
+    .content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .row label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .row input,
+    .row textarea,
+    .row select {
+        width: 100%;
+    }
+
+    table {
+        font-size: 12px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+        padding: 12px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 10px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .row label {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

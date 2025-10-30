@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="../CSS/forgotPass.css">
+</head>
+
+<body>
+    <div class="resetPass">
+        <div class="reHead">
+            <h1 class="reTitle">Reset Password</h1>
+            <p class="rePassconfirm">
+            Enter your new password and confirm
+            </p>
+        </div>
+
+        <div class="reBody">
+            <form id="resetPass">
+
+                <input type="hidden" id="token" name="token">
+
+                <div class="reForm">
+                    <label class="label" for="password">New Password</label>
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+                        required
+                        >
+                </div>
+
+                <div class="reConfirm">
+                    <label class="label" for="confirm">Confirm Password</label>
+                    <input
+                        id="confirm"
+                        name="confirm"
+                        type="password"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+                        required
+                    >
+                </div>
+
+                <div class="reRules">
+                    <div class="hints">
+                        <span>≥8 ตัวอักษร</span> •
+                        <span>มีตัวพิมพ์เล็กและใหญ่</span> •
+                        <span>มีตัวเลข</span> •
+                        <span>ไม่มีช่องว่าง</span>
+                    </div>
+                </div>
+
+                <button class="btn" type="submit">Save</button>
+
+                <div class="reLink">
+                    <a class="link" href="../Public/signin.html">Sign in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../client-script/resetpass.js"></script>
+</body>
+</html>

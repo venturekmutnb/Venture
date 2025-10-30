@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venture Tour</title>
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    
+</head>
+
+<body>
+    <header class="navbar"> 
+        <nav> 
+            <h1 class="logo">Venture Tour</h1> 
+            
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+            <ul class="menu" id="navbar-menu"> 
+                <li><a href="../Public/index.html">Home</a></li> 
+                <li><a href="../Public/allPackage.html">Package</a></li> 
+                <li id="profile-link" class="hidden dropdown">
+                    <div class="dropdown-toggle">
+                        <img src="../Pics/user.png" width="32" height="32" alt="User" class="user-icon"> 
+                        <span id="username-display"></span>
+                    </div>
+                    <ul class="dropdown-menu" id="dropdown-menu">
+                        <li><a href="../Public/user_dash/userdashboard.html" id="user-dashboard">User Dashboard</a></li>
+                        <li><a href="../Public/admin_dash/admindashboard.html" id="admin-dashboard" class="hidden">Admin Dashboard</a></li>
+                        <li><a href="#" id="logout-btn">Logout</a></li>
+                    </ul>
+                </li>
+
+                <li id="signin-link" class="visible"> 
+                        <a href="../Public/signin.html">Sign in</a> 
+                </li> 
+            </ul>
+        </nav> 
+    </header>
+
+    <section class="banner">
+        <div class="bannercon">
+            <h1>เที่ยวทั่วโลกกับ Venture Tour</h1>
+            <a href="../Public/allPackage.html" class="btngotopackage">ดูแพ็กเกจทัวร์</a>
+        </div>
+    </section>
+
+    <section class="promotions">
+        <h2>Promotions</h2>
+        <div class="promolist">
+            <div class="promo">
+                <h3>Early Bird ลด 15%</h3>
+                <p>สำหรับลูกค้าที่จองแพ็กเกจล่วงหน้าอย่างน้อย 30 วันก่อนวันเดินทาง</p>
+                <a href="../Public/allPackage.html" class="btnpromo">ดูแพ็กเกจทัวร์</a>
+            </div>
+
+            <div class="promo">
+                <h3>Last Minute ลด 10%</h3>
+                <p>สำหรับลูกค้าที่จองแพ็กเกจล่วงหน้าภายใน 7 วันก่อนวันเดินทาง</p>
+                <a href="../Public/allPackage.html" class="btnpromo">ดูแพ็กเกจทัวร์</a>
+            </div>
+
+            <div class="promo">
+                <h3>ลูกค้าใหม่ ลด 10%</h3>
+                <p>รับสิทธิ์ทันทีเมื่อสมัครเป็นสมาชิกใหม่และทำการจองแพ็กเกจครั้งแรก</p>
+                <a href="../Public/allPackage.html" class="btnpromo">ดูแพ็กเกจทัวร์</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tours">
+        <h2>Top Destinations</h2>
+        <div class="tourlist" id="topDestinationList">
+            
+        </div>
+        <div class="toursfoot">
+            <a href="../Public/allPackage.html" class="tourallpackage">ดูแพ็กเกจทั้งหมด →</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footercontainer">
+            <div class="footerabout">
+                <h3 class="footerlogo">Venture Tour</h3>
+                <p>บริษัททัวร์ที่พร้อมพาคุณไปทั่วโลก ด้วยแพ็กเกจคุณภาพและราคาที่คุ้มค่า</p>
+            </div>
+
+            <div class="footercontact">
+                <h4>Contact</h4>
+                <p>กรุงเทพฯ ประเทศไทย</p>
+                <p>02-123-4567</p>
+                <p>info@venturetour.com</p>
+            </div>
+
+            <div class="footersocial">
+                <h4>Follow Us</h4>
+                <p><a href="#">Facebook</a></p>
+                <p><a href="#">Instagram</a></p>
+                <p><a href="#">Line</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../client-script/NavStatus.js" defer></script>
+    <script src="../client-script/index.js" defer></script>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("show");
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+            dropdownToggles.forEach(toggle => {
+            toggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                const parentDropdown = toggle.closest(".dropdown");
+                parentDropdown.classList.toggle("show");
+            });
+            });
+
+            // ปิด dropdown 
+            document.addEventListener("click", (e) => {
+            document.querySelectorAll(".dropdown.show").forEach(openDropdown => {
+                if (!openDropdown.contains(e.target)) {
+                openDropdown.classList.remove("show");
+                }
+            });
+            });
+        });
+    </script>
+</body>
+</html>

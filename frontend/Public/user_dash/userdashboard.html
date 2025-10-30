@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="../../CSS/userdashboard_css/userprofile.css">
+</head>
+<body>
+    <main class="userProfile">
+        <header class="showProfile">
+            <div class="profileHeader">
+                <div class="profileInfo">
+                    <div class="icon">👤</div>
+                    <div>
+                        <div class="nameShow" id="nameShow">Loading...</div>
+                        <div class="emailShow" id="emailShow">Loading...</div>
+                    </div>
+                </div>
+                <button id="btnEdit" class="btnEdit">Edit</button>
+            </div>
+        </header>
+
+        <!-- Personal Details -->
+        <section class="showData">
+            <h3 class="title">Personal Details</h3>
+            <form id="profileForm">
+                <div class="field">
+                    <label class="label">Username</label>
+                    <input class="input" id="inputusername" type="text" disabled>
+                </div>
+                <div class="field">
+                    <label class="label">Email</label>
+                    <input class="input" id="inputemail" type="email" disabled>
+                </div>
+                <div class="field">
+                    <label class="label">Password</label>
+                    <input class="input" id="inputpassword" type="password" placeholder="Leave blank to keep current password" disabled>
+                </div>
+
+                <!-- ปุ่ม edit -->
+                <div class="editActions" id="editActions">
+                    <button type="button" id="btnCancel" class="btnCancel">Cancel</button>
+                    <button type="submit" class="btnSave">Save</button>
+                </div>
+            </form>
+
+            <!-- ปุ่ม Verify Email แยก -->
+            <div style="margin-top: 10px;">
+                <button type="button" id="btnVerifyEmail" class="btnVerifyEmail">Verify Email</button>
+            </div>
+        </section>
+
+        <div class="loyaltyPoints">
+            <h3 class="title">Points</h3>
+            <div class="pointsBox">
+                <div class="pointsLabel">
+                    Current Points: 
+                    <span class="pointsValue" id="pointsValue">Loading...</span>
+                </div>
+            </div>
+        </div>
+        
+        <section class="userHistory">
+            <h3 class="title">Your History</h3>
+            <ul class="history" id="historyList">
+                <!-- ประวัติจะโหลดเพิ่มทีหลัง ถ้าต้องการ -->
+            </ul>
+        </section>
+
+        <section class="backHome">
+            <a href="../index.html" class="btnHome">Back</a>
+        </section>
+    </main>
+
+    <script src="../../client-script/NavStatus.js"></script>
+    <script src="../../client-script/clientdashboardJS/userprofile.js"></script>
+</body>
+</html>

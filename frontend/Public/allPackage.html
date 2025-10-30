@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Packages</title>
+  <link rel="stylesheet" href="../CSS/navbar.css">
+  <link rel="stylesheet" href="../CSS/allPackage.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <nav>
+        <h1 class="logo">Venture Tour</h1>
+
+        <!-- Hamburger menu mobile -->
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+        <ul class="menu" id="navbar-menu">
+          <li><a href="../Public/index.html">Home</a></li>
+          <li><a href="../Public/allPackage.html">Package</a></li>
+          <li><a href="">Promotion</a></li>
+          <li id="profile-link" class="hidden dropdown">
+            <div class="dropdown-toggle">
+              <img src="../Pics/user.png" width="32" height="32" alt="User" class="user-icon"> 
+              <span id="username-display"></span>
+            </div>
+            <ul class="dropdown-menu" id="dropdown-menu">
+              <li><a href="../Public/user_dash/userdashboard.html" id="user-dashboard">User Dashboard</a></li>
+              <li><a href="../Public/admin_dash/admindashboard.html" id="admin-dashboard" class="hidden">Admin Dashboard</a></li>
+              <li><a href="#" id="logout-btn">Logout</a></li>
+            </ul>
+          </li>
+          <li id="signin-link" class="visible"> 
+            <a href="../Public/signin.html">Sign in</a> 
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page head -->
+  <section class="pagehead">
+    <h1 class="pagetitle">Package Tour</h1>
+    <p class="pagenote">ลูกค้าใหม่ใส่โค้ด <strong>NEW10</strong> เพื่อลด 10%</p>
+  </section>
+
+  <!-- Dynamic Promotions Container -->
+  <div id="promotionsContainer"></div>
+
+  <!-- Scripts -->
+  <script src="../client-script/NavStatus.js" defer></script>
+  <script src="../client-script/allPackage.js" defer></script>
+  <script>
+    // Hamburger toggle
+    function toggleMenu() {
+      document.querySelector(".menu").classList.toggle("show");
+    }
+
+    // Dropdown toggle
+    document.addEventListener("DOMContentLoaded", () => {
+      const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const parentDropdown = toggle.closest(".dropdown");
+          parentDropdown.classList.toggle("show");
+        });
+      });
+
+      document.addEventListener("click", () => {
+        document.querySelectorAll(".dropdown.show").forEach(openDropdown => {
+          openDropdown.classList.remove("show");
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

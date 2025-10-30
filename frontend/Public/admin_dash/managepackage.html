@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin - Manage Packages</title>
+  <link rel="stylesheet" href="../../CSS/admindashboard_css/managepackage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="sidebar-container"></div>
+
+  <main class="content">
+    <h1>Manage Packages</h1>
+
+ <section class="card">
+  <h2>เพิ่มแพ็กเกจใหม่</h2>
+  <form id="addPackageForm" enctype="multipart/form-data">
+    <div class="row">
+      <label>Package ID</label>
+      <input name="package_id" required placeholder="เช่น JP01">
+    </div>
+    <div class="row"><label>Title</label><input name="title" required></div>
+    <div class="row"><label>Destination</label><input name="destination" required></div>
+    <div class="row"><label>Duration (days)</label><input type="number" name="duration_days" required></div>
+    <div class="row"><label>Travel Date</label><input type="date" name="travel_date" required></div>
+    <div class="row"><label>Price</label><input type="number" name="price" step="0.01" required></div>
+    <div class="row"><label>Available seats</label><input type="number" name="available_seats" required></div>
+    <div class="row"><label>Image</label><input type="file" name="image"></div>
+    <div class="row"><label>Description</label><textarea name="description"></textarea></div>
+
+    <div id="plansContainer">
+      <h3>Daily Plans</h3>
+      <button type="button" id="addDayBtn">+ Add Day</button>
+    </div>
+
+    <div class="row">
+      <label>Attach promotions</label>
+      <div id="promoCheckboxes"></div>
+    </div>
+
+    <div class="row"><button type="submit">Save Package</button></div>
+  </form>
+</section>
+
+<section class="card">
+  <h2>All Packages</h2>
+  <table id="packagesTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Destination</th>
+        <th>Travel Date</th>
+        <th>Duration</th>
+        <th>Price</th>
+        <th>Seats</th>
+        <th>Description</th>
+        <th>Promotions</th>
+        <th>Plans</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+    
+    <section class="card">
+      <h2>Create Promotion</h2>
+      <form id="addPromoForm">
+      <div class="row"><label>Name</label>
+      <input name="name" required></div>
+      <div class="row"><label>Discount %</label>
+      <input type="number" name="discount_percent" step="0.01" required></div>
+      <div class="row"><label>Start</label>
+      <input type="date" name="start_date"></div>
+      <div class="row"><label>End</label>
+      <input type="date" name="end_date"></div>
+      <div class="row"><button type="submit">Create Promotion</button></div>
+      </form>
+  </section>
+  <section class="card">
+  <h2>All Promotions</h2>
+  <table id="promotionsTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Discount %</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  </section>
+  <!-- create code-->
+<section class="card">
+  <h2>Create Discount Code</h2>
+  <form id="addDiscountForm">
+    <div class="row"><label>Code</label><input name="code" required></div>
+    <div class="row"><label>Discount %</label><input name="discount_percent" type="number" step="0.01" required></div>
+    <div class="row"><label>Start</label><input name="start_date" type="date"></div>
+    <div class="row"><label>End</label><input name="end_date" type="date"></div>
+    <div class="row">
+      <label>Rules</label>
+      <div id="rulesContainer"></div>
+      <button type="button" id="addRuleBtn">+ Add Rule</button>
+    </div>
+    <div class="row"><button type="submit">Create Discount Code</button></div>
+  </form>
+  <table id="discountTable">
+    <thead>
+      <tr>
+        <th>Code</th><th>Discount %</th><th>Start</th><th>End</th><th>Rules</th><th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+  <!-- Edit Modal (reused for update) -->
+ <!-- Edit Modal -->
+<div id="editModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeEdit">&times;</span>
+    <h3>Edit Package</h3>
+    <form id="editPackageForm" enctype="multipart/form-data">
+      <input type="hidden" name="package_id" id="edit_package_id">
+
+      <div class="row"><label>Title</label><input name="title" id="edit_title" required></div>
+      <div class="row"><label>Destination</label><input name="destination" id="edit_destination" required></div>
+      <div class="row"><label>Duration</label><input type="number" name="duration_days" id="edit_duration_days" required></div>
+      <div class="row"><label>Travel Date</label><input type="date" name="travel_date" id="edit_travel_date" required></div>
+      <div class="row"><label>Price</label><input type="number" name="price" id="edit_price" step="0.01" required></div>
+      <div class="row"><label>Seats</label><input type="number" name="available_seats" id="edit_available_seats" required></div>
+      <div class="row"><label>Description</label><textarea name="description" id="edit_description"></textarea></div>
+      <div class="row"><label>Image (new)</label><input type="file" name="image" id="edit_image"></div>
+
+      <!-- Edit Plans -->
+      <div class="row">
+        <label>Daily Plans</label>
+        <div id="editPlansContainer">
+          <button type="button" id="editAddDayBtn">+ Add Day</button>
+        </div>
+      </div>
+
+      <div class="row"><button type="submit">Save Changes</button></div>
+    </form>
+  </div>
+</div>
+
+  <script src="../../client-script/admindashboardJS/package.js" defer></script>
+  <script src="../../client-script/admindashboardJS/sidebar.js"></script>
+</body>
+</html>

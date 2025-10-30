@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="../CSS/forgotPass.css">
+    </head>
+
+<body>
+    <div class="forgotPass">
+        <div class="fgHead">
+            <h1 class="fgTitle">Forgot Password</h1>
+            <p class="fgPutEmail">
+            Enter your registered email to receive a password reset link.
+            </p>
+        </div>
+
+        <div class="fgBody">
+            <form id="forgotPass" action="../../backend/forgotpass.php" method="post">
+                <div class="fgForm">
+                    <label class="label" for="email">Email</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        >
+                    </div>
+                <button class="btn" type="submit">Send a link</button>
+
+                <div class="fgLinks">
+                    <a class="link" href="../Public/signin.html">Sign in</a>
+                    <a class="link" href="../Public/index.html">Home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

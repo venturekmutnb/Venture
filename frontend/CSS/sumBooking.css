@@ -1,0 +1,301 @@
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+    margin:0;
+    padding:0;
+}
+
+.endSummary {
+    width:90%;
+    max-width:1000px;
+    margin:20px auto;
+}
+
+.endSum {
+    background:#fff;
+    border:1px solid #ccc;
+    border-radius:8px;
+    padding:18px;
+}
+
+.endName, .loyaltyTitle { 
+    margin:0 0 14px 0;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.sumTrip, .sumBase, .endPromo, .loyaltyBox, .summaryBox {
+    background:#fff;
+    border:1px solid #ccc;
+    border-radius:8px;
+    padding:14px;
+    margin-bottom:20px;
+}
+
+.sumTrip {
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:10px 16px;
+}
+
+.sumBase, .sumTotal, .sumRow {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+}
+
+.inputBase {
+    height:38px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    padding:0 10px;
+    background:#fff;
+    font-size:14px;
+}
+
+.endPromo .promoInputRow {
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.endPromo .formInput {
+    flex:1;
+    height:38px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    padding:0 10px;
+}
+
+.applyBtn {
+    height:38px;
+    padding:0 14px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    background:#f5f5f5;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+
+.applyBtn:hover { 
+    background:#e5e5e5; 
+}
+
+.Note {   
+    margin-top:8px; 
+    font-size:15px; 
+    color:#666; 
+}
+
+.formLabel { 
+    display:block; 
+    margin-bottom:10px; 
+}
+
+.loyaltyHeader {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:8px;
+}
+
+.loyaltyControls {
+    display: flex;
+    align-items: flex-end;   
+    gap: 8px;
+}
+
+.loyaltyInputGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pointsInput {
+    height: 38px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.loyaltyButtons {
+    display: flex;
+}
+
+.applyLoyaltyBtn {
+    height: 38px;
+    padding: 0 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f5f5f5;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.applyLoyaltyBtn:hover {
+    background: #e5e5e5;
+}
+
+.summaryBox .sumTotal,
+.summaryBox .sumRow { 
+    margin-bottom:10px; 
+}
+
+.summaryBox .sumRow + .sumRow { 
+    margin-top:8px; 
+}
+
+.negative { 
+    color:#b91c1c; 
+}
+
+.nowrap { 
+    white-space:nowrap; 
+}
+
+.bkLinks {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:16px;
+}
+
+.Button, .Link {
+    height:38px;
+    padding:0 12px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    background:#f5f5f5;
+    color:#000;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+
+.Button:hover, .Link:hover { 
+    background:#e5e5e5; 
+}
+
+.Button.isDisabled { 
+    opacity:.6; 
+    cursor:not-allowed; 
+}
+
+input[type="text"], input[type="number"], input[type="tel"], select, button {
+    height:38px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    font-size:14px;
+    line-height:1.2;
+    padding:0 10px;
+    box-sizing:border-box;
+}
+
+button {
+    background:#f5f5f5;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+
+button:hover { 
+    background:#e5e5e5; 
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .endSummary {
+        max-width: 900px;
+        margin: 30px auto;
+    }
+
+    .endSum {
+        padding: 22px;
+    }
+
+    .sumTrip {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sumBase, .sumTotal, .sumRow {
+        font-size: 16px;
+    }
+
+    .applyBtn, .applyLoyaltyBtn {
+        height: 40px;
+        padding: 0 16px;
+        font-size: 15px;
+    }
+
+    .pointsInput,
+    .formInput {
+        height: 40px;
+    }
+
+    .bkLinks {
+        margin-top: 20px;
+    }
+
+    .Button, .Link {
+        min-width: 110px;
+        height: 42px;
+        font-size: 15px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .endSummary {
+        max-width: 1100px;
+        margin: 40px auto;
+    }
+
+    .endSum {
+        padding: 26px 28px;
+    }
+
+    .sumTrip {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px 20px;
+    }
+
+    .sumBase, .sumTotal, .sumRow {
+        font-size: 17px;
+    }
+
+    .Note {
+        font-size: 15.5px;
+    }
+
+    .bkLinks {
+        margin-top: 24px;
+    }
+
+    .Button, .Link {
+        height: 46px;
+        font-size: 16px;
+        padding: 0 18px;
+    }
+
+    .applyBtn, .applyLoyaltyBtn {
+        height: 42px;
+        font-size: 15.5px;
+        padding: 0 18px;
+    }
+}

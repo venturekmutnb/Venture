@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #111827;
+    background: #f5f5f5;
+}
+
+.payment {
+    max-width: 960px;
+    margin: 24px auto 40px;
+    padding: 0 20px;
+}
+
+.pmBox {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 16px;
+}
+
+.pmHead {
+    margin-bottom: 12px;
+}
+
+.pmTitle {
+    margin: 0 0 6px;
+    font-size: 22px;
+}
+
+.note {
+    margin: 0;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.pmQR {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 14px 16px;
+}
+
+.qrBox {
+    display: grid;
+    place-items: center;
+    gap: 10px;
+    padding-top: 6px;
+}
+
+.qrImage {
+    width: 240px;
+    height: 240px;
+    object-fit: contain;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #f9fafb;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.btnBack {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btnBack:hover {
+    background: #f3f4f6;
+}
+
+.btnSuccess {
+    height: 36px;
+    padding: 0 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #1f2937;
+    color: #9ca3af;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: not-allowed;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .payment {
+        max-width: 800px;
+        padding: 0 30px;
+    }
+
+    .pmBox {
+        padding: 24px 28px;
+    }
+
+    .pmTitle {
+        font-size: 24px;
+    }
+
+    .note {
+        font-size: 15px;
+    }
+
+    .qrImage {
+        width: 280px;
+        height: 280px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+
+    .btnBack, .btnSuccess {
+        height: 40px;
+        font-size: 15px;
+        padding: 0 18px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .payment {
+        max-width: 1000px;
+        padding: 0 40px;
+    }
+
+    .pmBox {
+        padding: 28px 32px;
+        border-radius: 12px;
+    }
+
+    .pmTitle {
+        font-size: 26px;
+    }
+
+    .note {
+        font-size: 16px;
+    }
+
+    .qrImage {
+        width: 320px;
+        height: 320px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .btnBack, .btnSuccess {
+        height: 44px;
+        font-size: 16px;
+        padding: 0 22px;
+    }
+
+    .btn {
+        margin-top: 24px;
+    }
+}

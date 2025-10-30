@@ -1,0 +1,251 @@
+:root {
+  --text: #2b3345;
+  --muted: #6b7280;
+  --brand: #2b3345;
+  --danger: #dc2626;
+  --info: #1a56ff;
+  --success: #065f46;
+
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --border: #e8ecf3;
+  --shadow: 0 6px 18px rgba(17, 23, 36, .06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Segoe UI, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.forgotPass, .resetPass {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Forgot Password (re*) */
+.fgHead {
+  padding: 20px 22px 10px;
+}
+
+.fgTitle {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.fgPutEmail {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.fgBody {
+  padding: 10px 22px 22px;
+}
+
+.fgForm {
+  margin: 12px 0 14px;
+}
+
+.fgForm .label {
+  display: block;
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.fgForm input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  background: #ffffff;
+}
+
+.fgForm input[type="email"]:focus {
+  border-color: #b6c0d6;
+  box-shadow: 0 0 0 3px rgba(26, 86, 255, .08);
+}
+
+.fgSendEmail {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.fgLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* Reset Password (re*) */
+.reHead {
+  padding: 20px 22px 10px;
+}
+
+.reTitle {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.rePassconfirm {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.reBody {
+  padding: 10px 22px 22px;
+}
+
+.reForm, .reConfirm {
+  margin: 12px 0 14px;
+}
+
+.reForm, .reConfirm {
+  position: relative;
+}
+
+.reForm .label, .reConfirm .label {
+  display: block;
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.reForm input[type="password"],
+.reConfirm input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  background: #ffffff;
+}
+
+.reForm input[type="password"]:focus,
+.reConfirm input[type="password"]:focus {
+  border-color: #b6c0d6;
+  box-shadow: 0 0 0 3px rgba(26, 86, 255, .08);
+}
+
+.reRules {
+  margin: 12px 0 14px;
+}
+
+.hints {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.hints .ok {
+  color: var(--success);
+}
+
+.reLink {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--brand);
+  color: #ffffff;
+  background: var(--brand);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.link {
+  color: var(--info);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .forgotPass, .resetPass {
+    max-width: 480px;
+    padding: 0;
+  }
+
+  .fgHead, .reHead {
+    padding: 30px 40px 15px;
+  }
+
+  .fgBody, .reBody {
+    padding: 20px 40px 40px;
+  }
+
+  .btn {
+    font-size: 15px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .forgotPass, .resetPass {
+    max-width: 540px;
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(17, 23, 36, 0.12);
+  }
+
+  .fgHead, .reHead {
+    padding: 40px 48px 18px;
+  }
+
+  .fgBody, .reBody {
+    padding: 24px 48px 48px;
+  }
+
+  .btn {
+    font-size: 16px;
+    height: 46px;
+  }
+}

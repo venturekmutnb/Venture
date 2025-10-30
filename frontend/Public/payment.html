@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="../CSS/payment.css">
+</head>
+<body>
+    <main class="payment">
+        <div class="pmBox">
+            <section class="pmHead">
+                <h1 class="pmTitle">Payment</h1>
+                <p class="note">Please scan the QR code to make the payment and click confirm once the transfer is completed.</p>
+                <h3 id="paymentAmountDisplay" style="text-align: center; color: #333; font-size: 1.8rem; margin-block: 20px;">
+                    ยอดที่ต้องชำระ: กำลังโหลด...
+                </h3>
+            </section>
+            
+            <section class="pmQR">
+                <h2 class="note">Scan for payment here.</h2>
+                <div class="qrBox">
+                    <img class="qrImage" src="../Pics/qrCode.png" alt="QR Payment">
+                </div>
+            </section>
+
+            <div class="btn">
+                <a class="btnBack" href="../Public/sumBooking.html">Back</a>
+
+                <button type="button" id="uploadButton" class="btnUploadStyle">อัปโหลดสลิป</button>
+                <input type="file" id="slipUpload" name="paymentSlip" accept=".png, .jpg" style="display: none;">
+
+                <button class="btnSuccess" type="button" disabled>Success</button>
+            </div>
+
+            <div class="fileNameDisplay">
+                <span id="fileNameLabel">ไฟล์ที่เลือก: </span>
+                <span id="fileName"></span>
+            </div>
+        </div>
+    </main>
+<script src="../client-script/payment.js"></script>
+</body>
+</html>

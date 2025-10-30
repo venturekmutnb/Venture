@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Booking Package</title>
+    <link rel="stylesheet" href="../CSS/booking.css">
+</head>
+<body>
+    <!-- Package Info -->
+    <main class="packageInfo">
+        <div class="leftCol">
+            <section class="showPackage"> 
+                <h2 id="pkgName">Loading package...</h2>
+                <p>
+                    <span id="pkgDesc">Loading...</span>
+                    <span id="pkgDuration"></span>
+                    ราคาเริ่มต้น: <span id="pkgPrice">-</span> บาท/คน
+                </p>
+                
+                <section class="peopleCount">
+                    <div>จำนวนผู้เดินทาง:</div>
+                    <div class="quan">
+                        <button type="button" onclick="changeQty(-1)">-</button>
+                        <input type="number" id="qty" value="1" min="1" max="15">
+                        <button type="button" onclick="changeQty(1)">+</button>
+                    </div>
+
+                </section>
+            </section>
+
+            <section class="summary">
+                <h2 style="color:#012eab; font-weight:900;"> Summary Detail </h2> 
+                <section class="sumBox">
+                    <div class="pricePer">
+                        <div>Price per person</div>
+                        <div id="perPerson">-</div>
+                    </div>
+                        
+                    <div class="quanTra">
+                        <div>Travelers</div>
+                        <div id="showQty">1</div>
+                    </div>
+
+                    <div class="sumTotal">
+                        <div>Subtotal (before discount code)</div>
+                        <div id="total">- Baht</div>
+                    </div>
+                    <br>
+                </section>
+            </section>
+
+            <nav class="btngroup">
+                <a href="../Public/allPackage.html" class="btn">Back</a>
+                <a id="nextLink" href="../Public/sumBooking.html" class="btn">Next</a>
+            </nav>
+        </div>
+        
+        <div class="rightCol">
+
+            <!-- Traveler Info Form -->
+            <section class="travelers">
+                <h2>Traveler Information</h2>
+
+                <div id="travelerList">
+                    <form id="traveler1" class="travelerForm">
+                        <h3>Traveler 1</h3>
+
+                        <label>Salutation</label>
+                        <select  required>
+                        <option value="">-- Select --</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        </select>
+                        <label>Firstname</label>
+                        <input type="text" pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Lastname</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Passport No.</label>
+                        <input type="text"  pattern="[A-Z0-9]{6,9}" required>
+                        <label>Age</label>
+                        <input type="number" min="1" max="100" required>
+                        <label>Telephone</label>
+                        <input type="text" pattern="^0[0-9]{8,9}$" required>
+                    </form>
+
+                    <form id="traveler2" class="travelerForm" style="display:none;">
+                        <h3>Traveler 2</h3>
+                        <label>Salutation</label>
+                        <select required>
+                        <option value="">-- Select --</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        </select>
+                        <label>First Name</label>
+                        <input type="text" pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Last Name</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Passport Number</label>
+                        <input type="text"  pattern="[A-Z0-9]{6,9}" required>
+                        <label>Age</label>
+                        <input type="number" min="1" max="100" required>
+                        <label>Telephone</label>
+                        <input type="text" pattern="^0[0-9]{8,9}$" required>
+                    </form>
+
+                    <form id="traveler3" class="travelerForm" style="display:none;">
+                        <h3>Traveler 3</h3>
+                        <label>Salutation</label>
+                        <select required>
+                        <option value="">-- Select --</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        </select>
+                        <label>First Name</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Last Name</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Passport Number</label>
+                        <input type="text"  pattern="[A-Z0-9]{6,9}" required>
+                        <label>Age</label>
+                        <input type="number" min="1" max="100" required>
+                        <label>Telephone</label>
+                        <input type="text"  pattern="^0[0-9]{8,9}$" required>
+                    </form>
+
+                    <form id="traveler4" class="travelerForm" style="display:none;">
+                        <h3>Traveler 4</h3>
+                        <label>Salutation</label>
+                        <select required>
+                        <option value="">-- Select --</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        </select>
+                        <label>First Name</label>
+                        <input type="text" pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Last Name</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Passport Number</label>
+                        <input type="text"  pattern="[A-Z0-9]{6,9}" required>
+                        <label>Age</label>
+                        <input type="number"  min="1" max="100" required>
+                        <label>Telephone</label>
+                        <input type="text"  pattern="^0[0-9]{8,9}$" required>
+                    </form>
+
+                    <form id="traveler5" class="travelerForm" style="display:none;">
+                        <h3>Traveler 5</h3>
+                        <label>Salutation</label>
+                        <select required>
+                        <option value="">-- Select --</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        </select>
+                        <label>First Name</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Last Name</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Passport Number</label>
+                        <input type="text"  pattern="[A-Z0-9]{6,9}" required>
+                        <label>Age</label>
+                        <input type="number"  min="1" max="100" required>
+                        <label>Telephone</label>
+                        <input type="text"  pattern="^0[0-9]{8,9}$" required>
+                    </form>
+
+                    <form id="traveler6" class="travelerForm" style="display:none;">
+                        <h3>Traveler 6</h3>
+                        <label>Salutation</label>
+                        <select required>
+                        <option value="">-- Select --</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        </select>
+                        <label>First Name</label>
+                        <input type="text" pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Last Name</label>
+                        <input type="text" pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Passport Number</label>
+                        <input type="text" pattern="[A-Z0-9]{6,9}" required>
+                        <label>Age</label>
+                        <input type="number" min="1" max="100" required>
+                        <label>Telephone</label>
+                        <input type="text" pattern="^0[0-9]{8,9}$" required>
+                    </form>
+
+                    <form id="traveler7" class="travelerForm" style="display:none;">
+                        <h3>Traveler 7</h3>
+                        <label>Salutation</label>
+                        <select required>
+                        <option value="">-- Select --</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        </select>
+                        <label>First Name</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Last Name</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Passport Number</label>
+                        <input type="text"  pattern="[A-Z0-9]{6,9}" required>
+                        <label>Age</label>
+                        <input type="number"  min="1" max="100" required>
+                        <label>Telephone</label>
+                        <input type="text"  pattern="^0[0-9]{8,9}$" required>
+                    </form>
+
+                    <form id="traveler8" class="travelerForm" style="display:none;">
+                        <h3>Traveler 8</h3>
+                        <label>Salutation</label>
+                        <select  required>
+                        <option value="">-- Select --</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        </select>
+                        <label>First Name</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Last Name</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Passport Number</label>
+                        <input type="text"  pattern="[A-Z0-9]{6,9}" required>
+                        <label>Age</label>
+                        <input type="number"  min="1" max="100" required>
+                        <label>Telephone</label>
+                        <input type="text"  pattern="^0[0-9]{8,9}$" required>
+                    </form>
+
+                    <form id="traveler9" class="travelerForm" style="display:none;">
+                        <h3>Traveler 9</h3>
+                        <label>Salutation</label>
+                        <select required>
+                        <option value="">-- Select --</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        </select>
+                        <label>First Name</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Last Name</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Passport Number</label>
+                        <input type="text" pattern="[A-Z0-9]{6,9}" required>
+                        <label>Age</label>
+                        <input type="number"  min="1" max="100" required>
+                        <label>Telephone</label>
+                        <input type="text"  pattern="^0[0-9]{8,9}$" required>
+                    </form>
+
+                    <form id="traveler10" class="travelerForm" style="display:none;">
+                        <h3>Traveler 10</h3>
+                        <label>Salutation</label>
+                        <select required>
+                        <option value="">-- Select --</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        </select>
+                        <label>First Name</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Last Name</label>
+                        <input type="text"  pattern="[A-Za-zก-๙\s]+" required>
+                        <label>Passport Number</label>
+                        <input type="text" pattern="[A-Z0-9]{6,9}" required>
+                        <label>Age</label>
+                        <input type="number"  min="1" max="100" required>
+                        <label>Telephone</label>
+                        <input type="text"  pattern="^0[0-9]{8,9}$" required>
+                    </form>
+                </div>
+                
+            </section>
+        </div>
+    </main>
+
+    <script src="../client-script/booking.js"></script>
+    <script src="../client-script/validformbooking.js"></script>
+</body>
+</html>

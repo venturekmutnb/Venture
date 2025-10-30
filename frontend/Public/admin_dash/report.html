@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/admindashboard_css/report.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav id="sidebar-container">
+    </nav>
+    <section class="content">
+        <h1>View Report</h1>
+        <div class="container">
+    <h1>รายงานสรุปรายได้</h1>
+
+    <div class="filter">
+      <label for="filterType">กรองข้อมูลตาม:</label>
+      <select id="filterType">
+        <option value="month">รายเดือน</option>
+        <option value="quarter">รายไตรมาส</option>
+        <option value="year">รายปี</option>
+      </select>
+
+      <label for="filterYear">ปี:</label>
+      <select id="filterYear"></select>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="revenueChart"></canvas>
+    </div>
+
+    <table id="revenueTable">
+      <thead>
+        <tr>
+          <th>ช่วงเวลา</th>
+          <th>รายได้ (บาท)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+    </section>
+<script src="../../client-script/admindashboardJS/sidebar.js" defer></script>
+<script src="../../client-script/admindashboardJS/report.js" defer></script>
+</body>
+</html>

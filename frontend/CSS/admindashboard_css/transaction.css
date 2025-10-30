@@ -1,0 +1,196 @@
+/* --- Global --- */
+body {
+    font-family: "Prompt", sans-serif;
+    background-color: #077bf0;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 20px;
+    margin-left: 250px; /* สำหรับ sidebar ถ้ามี */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* --- Package Section --- */
+.packageTableWrapper {
+    margin-bottom: 30px;
+    overflow-x: auto; /* scroll ได้บนจอเล็ก */
+}
+
+.packageTableWrapper h3 {
+    margin-bottom: 10px;
+    color: #111111;
+    font-size: 18px;
+}
+
+/* --- Table --- */
+.transactionTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    min-width: 600px; /* ให้เลื่อนดูได้ถ้าจอเล็ก */
+}
+
+.transactionTable th, .transactionTable td {
+    border: 1px solid #0e87e9;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.transactionTable th {
+    background-color: #0077cc;
+    color: #fff;
+}
+
+.transactionTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.statusCell {
+    font-weight: bold;
+}
+
+.status-pending { color: orange; }
+.status-paid { color: blue; }
+.status-completed { color: green; }
+.status-cancelled { color: red; }
+
+/* --- Buttons --- */
+.btnUpdate {
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 5px;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.btnUpdate:hover {
+    background-color: #005fa3;
+}
+
+.statusSelect {
+    padding: 4px 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+.packageSummaryWrapper {
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+.summaryTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+.summaryTable th, .summaryTable td {
+    border: 1px solid #0e87e9;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.summaryTable th {
+    background-color: #f4f4f4;
+}
+.topCustomersWrapper {
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+.topCustomersWrapper h3 {
+    margin-bottom: 10px;
+    color: #111111;
+    font-size: 18px;
+}
+
+.topCustomersTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+.topCustomersTable th, .topCustomersTable td {
+    border: 1px solid #0e87e9;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.topCustomersTable th {
+    background-color: #f4f4f4;
+}
+
+/* สีสลับแถว */
+.topCustomersTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+@media (max-width: 480px) {
+    .summaryTable th, .summaryTable td {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+    .topCustomersTable th, .topCustomersTable td {
+        padding: 4px 6px;
+        font-size: 10px;
+    }
+    .transactionTable th, .transactionTable td {
+        padding: 4px 6px;
+        font-size: 10px;
+    }
+
+    .btnUpdate {
+        padding: 2px 4px;
+        font-size: 10px;
+        margin-left: 2px;
+    }
+
+    .packageTableWrapper h3 {
+        font-size: 14px;
+    }
+
+    .transactionTable {
+        min-width: 500px; 
+    }
+
+    .statusSelect {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+}
+
+/* Medium screen */
+@media (max-width: 768px) {
+    .transactionTable th, .transactionTable td {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    .btnUpdate {
+        padding: 3px 6px;
+        font-size: 12px;
+        margin-left: 3px;
+    }
+
+    .statusSelect {
+        font-size: 12px;
+        padding: 3px 5px;
+    }
+
+     .topCustomersTable th, .topCustomersTable td {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+}
+
+

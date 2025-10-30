@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Summary</title>
+  <link rel="stylesheet" href="../CSS/sumBooking.css" />
+</head>
+<body>
+  <div class="endSummary">
+    <section class="endSum">
+      <h3 class="endName">Promotion & Loyalty</h3>
+
+      <!-- ข้อมูลแพ็กเกจ -->
+      <div class="sumTrip" id="tripDetails">
+        <div>Package</div><div id="summary-package">-</div>
+        <div>Departure</div><div id="tripDate">-</div>
+        <div>Travelers</div><div id="tripTravelers">-</div>
+      </div>
+
+      <!-- Subtotal -->
+      <div class="sumBase">
+        <div id="subtotalText">Subtotal</div>
+        <div id="subtotalValue">-</div>
+      </div>
+
+      <!-- Promotion -->
+      <div class="endPromo">
+        <label class="formLabel" for="promo">Promotion Code</label>
+        <div class="promoInputRow">
+          <input id="promo" class="formInput" type="text" placeholder="NEW10" autocomplete="off" />
+          <button class="applyBtn" type="button" id="applyPromoBtn">Apply</button>
+        </div>
+        <p class="promoFeedback" aria-live="polite"></p>
+        <p class="Note">เฉพาะลูกค้าใหม่กรอกโค้ดส่วนลด NEW10 เพื่อรับส่วนลด 10%</p>
+      </div>
+
+      <!-- Loyalty -->
+      <div class="loyaltyBox">
+        <div class="loyaltyHeader">
+          <h4 class="loyaltyTitle">Use Loyalty Points</h4>
+          <div class="pointsBalance">
+            Balance: <strong class="pointsValue" id="pointsBalance">0</strong> points
+          </div>
+        </div>
+
+        <div class="loyaltyControls">
+          <div class="loyaltyInputGroup">
+            <label class="formLabel" for="loyaltyPts">Points to redeem</label>
+            <input id="loyaltyPts" class="formInput pointsInput" type="number" min="0" step="1" placeholder="0" />
+          </div>
+          <div class="loyaltyButtons">
+            <button class="applyLoyaltyBtn" type="button" id="applyLoyaltyBtn">Apply Points</button>
+          </div>
+        </div>
+        <p class="Note">100 แต้ม: 1 บาท ใช้แต้มได้สูงสุด 50% ของยอดซื้อ</p>
+      </div>
+
+      <!-- Summary -->
+      <div class="summaryBox">
+        <div class="sumTotal">
+          <span>Subtotal</span>
+          <span id="sumSubtotal">-</span>
+        </div>
+
+
+        <div class="sumRow discountRow isHidden" id="rowPromo">
+          <span class="sumLabel">Promotion Code</span>
+          <span class="sumValue negative" id="promoDiscount">-</span>
+        </div>
+
+        <div class="sumRow discountRow isHidden" id="rowPackageCode">
+  <span class="sumLabel">Code Discount</span>
+  <span class="sumValue negative" id="packageCodeDiscount">-</span>
+</div>
+
+        <div class="sumRow discountRow isHidden" id="rowLoyalty">
+          <span class="sumLabel">Loyalty Points</span>
+          <span class="sumValue negative" id="loyaltyDiscount">-</span>
+        </div>
+
+        <div class="sumTotal final">
+          <span>Total</span>
+          <span id="finalTotal">-</span>
+        </div>
+      </div>
+
+      <div class="bkLinks">
+        <a class="Link" href="../Public/booking.html">Back</a>
+        <a href="payment.html" class="Button" id="payBtn">Payment</a>
+      </div>
+    </section>
+  </div>
+
+  <script src="../client-script/sumBooking.js"></script>
+</body>
+</html>

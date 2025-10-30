@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../CSS/admindashboard_css/manageusr.css">
+</head>
+<body>
+    <nav id="sidebar-container">
+    </nav>
+
+   <main class="content">
+    <h1>Manage Users</h1>
+        <div class="filter-bar">
+            <label for="roleFilter">Filter by Role:</label>
+                <select id="roleFilter">
+                    <option value="all">All</option>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+
+            <label for="searchInput">Search:</label>
+                    <input type="text" id="searchInput" placeholder="Search-username/email">
+            <label for="startDate">From:</label>
+            <input type="date" id="startDate">
+
+            <label for="endDate">To:</label>
+            <input type="date" id="endDate">
+
+            <button id="applyDateFilter">Apply</button>
+        </div>
+        <div id="editModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Edit User</h2>
+          <form id="editForm">
+            <input type="hidden" id="edit_id">
+      
+            <label>Username:</label>
+            <input type="text" id="edit_username" required>
+
+            <label>Email:</label>
+            <input type="email" id="edit_email" required>
+
+            <label>Role:</label>
+            <select id="edit_role">
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
+            <button type="submit">Save Changes</button>
+         </form>
+        </div>
+        </div>
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Created At</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+  <script src="../../client-script/admindashboardJS/manageUsr.js" defer></script>
+  <script src="../../client-script/admindashboardJS/sidebar.js" defer></script>
+  <script src="../../client-script/admindashboardJS/deleteuser.js" defer></script>
+  <script src="../../client-script/admindashboardJS/edituser.js" defer></script>
+</body>
+</html>

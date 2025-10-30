@@ -1,0 +1,381 @@
+body { margin: 0; 
+  font-family: sans-serif; 
+  color: #333; } 
+  
+.navbar { 
+  background: #111827; 
+  color: #fff; 
+  padding: 10px 20px; 
+  position: relative; 
+  z-index: 1000; 
+} 
+
+.navbar nav { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  position: relative; 
+} 
+
+.navbar .logo { 
+  margin: 0; 
+  font-weight: bold; 
+  font-size: 20px; 
+} 
+
+.navbar .hamburger { 
+  display: block; 
+  background: none; 
+  border: none; 
+  font-size: 26px; 
+  color: #fff; 
+  cursor: pointer; 
+  position: absolute; 
+  right: 20px; 
+  top: 10px; 
+  z-index: 1010; 
+} 
+
+.navbar .menu { 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  display: none; 
+  flex-direction: column; 
+  background: #1f2937; 
+  position: absolute; 
+  top: 55px; 
+  right: 0; 
+  width: 220px; 
+  border-radius: 0 0 10px 10px; 
+  overflow: hidden; 
+  transition: max-height 0.3s ease; 
+  max-height: 0; } 
+  
+  .navbar .menu.show { 
+    display: flex; 
+    max-height: 500px; } 
+    
+  .navbar .menu a { 
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: 500; 
+    padding: 10px 20px; 
+    display: block; 
+  } 
+    
+  .navbar .menu a:hover { 
+    background: #374151; 
+  } 
+  
+  .dropdown { 
+    position: relative; 
+  } 
+  
+  .dropdown-toggle { 
+    display: flex; 
+    align-items: center; 
+    gap: 6px; 
+    cursor: pointer; 
+    padding: 10px 20px; 
+  } 
+  
+  .user-icon { 
+    width: 28px; 
+    height: 28px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    background: #fff; 
+  } 
+    
+  .dropdown-menu { 
+    display: none; 
+    position: absolute; 
+    top: 48px; right: 0; 
+    background: #1f2937; 
+    border-radius: 6px; 
+    list-style: none; 
+    padding: 8px 0; 
+    margin: 0; 
+    width: 180px; 
+    z-index: 2000; 
+  } 
+    
+  .dropdown-menu li a {
+    display: block; 
+    color: #fff; 
+    text-decoration: none; 
+    padding: 10px 16px; 
+  } 
+  
+  .dropdown-menu li a:hover { 
+    background: #374151; 
+  } 
+  
+  .dropdown.show .dropdown-menu { 
+    display: block; 
+  } 
+  
+  .banner { 
+    height: 60vh; 
+    min-height: 460px; 
+    position: relative; 
+    background: url("../Pics/banner.jpg") center / cover no-repeat; } 
+    
+  .banner::before { 
+    content: ""; 
+    position: absolute; 
+    inset: 0; background: 
+    linear-gradient( 90deg, rgba(5, 12, 22, 0.55) 0%, rgba(5, 12, 22, 0.3) 45%, rgba(5, 12, 22, 0.0) 80% ); 
+  } 
+
+  .bannercon { 
+    position: relative;
+    z-index: 1; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 16px; padding-left: 8%; 
+  } 
+  
+  .bannercon h1 { 
+    color: #fff; 
+    font-size: 48px; 
+    margin: 0; 
+    line-height: 1.1; 
+    text-shadow: 0 1px 6px rgba(0,0,0,.25); 
+  } 
+  
+  .btngotopackage { 
+    display: inline-block; 
+    padding: 12px 22px; 
+    background: #222; 
+    color: #fff; 
+    border-radius: 12px; 
+    text-decoration: none; 
+    font-weight: 600; 
+    box-shadow: 0 4px 14px rgba(26,86,255,.18); 
+  } 
+  
+  .btngotopackage:hover { 
+    text-decoration: underline; 
+  } 
+  
+  .promotions { 
+    padding: 30px 20px; 
+    background: #f2f2f2; 
+    text-align: center; 
+  } 
+    
+  .promotions h2 { 
+    margin-bottom: 20px; 
+  } 
+  
+  .promolist { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    justify-items: center;
+  } 
+  
+  .promo { 
+    width: 250px; 
+    padding: 20px;
+    background: #fff; 
+    border: 1px solid #e5e7eb; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
+    text-align: center; 
+    transition: transform .2s ease, box-shadow .2s ease; 
+  } 
+  
+  .promo:hover { 
+    transform: translateY(-4px); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); } 
+  
+  .btnpromo { 
+    display: inline-block; 
+    margin-top: 10px; 
+    padding: 8px 14px; 
+    background: #111827; 
+    color: #fff; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    transition: background .3s; 
+  } 
+    
+  .btnpromo:hover { 
+    background: #2b3345; 
+  } 
+    
+  .tours { 
+    padding: 24px 20px 48px; 
+  } 
+  
+  .tours h2 { 
+    text-align: center; 
+    margin: 30px 0 20px; 
+  } 
+  
+  .tourlist { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    justify-items: center; 
+  } 
+  
+  .tourcon { 
+    width: 260px; 
+    background: #fff; 
+    border: 1px solid #e5e7eb; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 12px rgba(17, 23, 36, 0.08); 
+    transition: transform .2s, box-shadow .2s; 
+  } 
+  
+  .tourcon:hover { 
+    transform: translateY(-4px); 
+    box-shadow: 0 8px 20px rgba(17, 23, 36, 0.12); 
+  } 
+    
+  .tourimg { 
+    width: 100%; 
+    height: 180px; 
+    object-fit: cover; 
+  } 
+  
+  .tourdetail { 
+    padding: 14px 16px 18px; 
+  } 
+    
+  .tourname { 
+    margin: 0 0 6px; 
+    font-size: 18px; 
+    font-weight: 600;
+  } 
+    
+  .tourdata { 
+    color: #6b7280; 
+    font-size: 14px;
+    margin: 0 0 8px;
+  } 
+  
+  .tourprice { 
+    color: #cc1e1e; 
+    font-weight: 700; 
+    margin: 0 0 10px; 
+  } 
+  
+  .tourbtn { 
+    display: inline-block; 
+    padding: 8px 12px; 
+    border: 1px solid #2b3345; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    color: #2b3345;
+  }
+    
+  .tourbtn:hover { 
+    background: #2b3345; 
+    color: #fff; 
+  } 
+  
+  .toursfoot { 
+    margin-top: 20px; 
+    text-align: right; 
+  } 
+  
+  .tourallpackage { 
+    color: #5b21b6; 
+    font-weight: 500; 
+    text-decoration: none; 
+  } 
+  
+  .tourallpackage:hover { 
+    text-decoration: 
+    underline; 
+  } 
+  
+  .footer { 
+    background: #111827; 
+    color: #d1d5db; 
+    padding: 40px 20px 20px; 
+    font-size: 14px; 
+  } 
+  
+  .footercontainer { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 24px; 
+  } 
+  
+  .footerlogo { 
+    font-size: 20px; 
+    font-weight: 700; 
+    color: #fff; 
+  } 
+  
+  .footersocial a { 
+    color: #d1d5db; 
+    text-decoration: none; 
+  } 
+  
+  .footersocial a:hover { 
+    text-decoration: underline; 
+    color: #fff; 
+  } 
+  
+  @media (min-width: 768px) { 
+    .navbar .hamburger { 
+      font-size: 30px; 
+      top: 8px; 
+    } 
+    
+    .promolist { 
+      grid-template-columns: repeat(2, 1fr); 
+    } 
+    
+    .tourlist { 
+      grid-template-columns: repeat(2, 1fr); 
+    } 
+    
+    .footercontainer { 
+      grid-template-columns: 2fr 1fr 1fr; 
+    } 
+  } 
+  
+  @media (min-width: 1024px) { 
+    .navbar .hamburger { 
+      display: none; 
+    } 
+    
+    .navbar .menu { 
+      display: flex !important; 
+      flex-direction: row; 
+      position: static; 
+      background: none; 
+      width: auto; 
+      max-height: none; 
+    } 
+    
+    .navbar .menu a { 
+      padding: 0 16px; 
+    } 
+    
+    .dropdown-menu { 
+      top: 45px; 
+    } 
+    
+    .promolist { 
+      grid-template-columns: repeat(3, 1fr); 
+    } 
+    
+    .tourlist { 
+      grid-template-columns: repeat(3, 1fr); 
+    } 
+    .bannercon h1 { 
+      font-size: 54px; 
+    } 
+  }

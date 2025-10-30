@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/signin_up.css">
+</head>
+<body>
+    <section class="signuppage">
+        <div class="imagesignup">
+            <img src="../Pics/signup.jpg" alt="Travel img">
+        </div>
+
+        <div class="signupform">
+            <h1 class="signupti">Sign up</h1>
+            <p class="signupsub">Start your journey with Venture Tour</p>
+            <form id="register">
+                <div class="signupdetail">
+                    <label class="signuplabel">Email</label>
+                    <input class="signupinput" 
+                           type="email" name="email" id="email" 
+                           required>
+                </div>
+                <div class="signupdetail">
+                    <label class="signuplabel">Username</label>
+                    <input class="signupinput" 
+                           type="text" name="username" id="username" 
+                           required>
+                </div>
+
+                <div class="signupdetail">
+                    <label class="signuplabel">Password</label>
+                    <input class="signupinput" type="password" 
+                           name="pass" id="pass"
+                           minlength="8"
+                           maxlength="15" 
+                           required>
+                </div>
+
+                <div class="signupdetail">
+                    <label class="signuplabel">Confirm Password</label>
+                    <input class="signupinput" type="password" 
+                           name="firmpass" id="firmpass"
+                           minlength="8"
+                           maxlength="15"  
+                           required>
+                </div>
+
+                <div class="signupbutton">
+                    <button class="btnsignin" type="submit">Sign in</button>
+                </div>
+
+                <div class="haveaccount">
+                    <p class="haveaccount">
+                        <a class="formlink" href="../Public/signin.html">Have an account? Log in</a>
+                    </p>
+
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="../client-script/signup.js" defer></script>
+</body>
+</html>

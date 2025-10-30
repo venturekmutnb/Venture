@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Package Detail</title>
+        <link rel="stylesheet" href="../CSS/packageDetail.css">
+    </head>
+    <body>
+        <main class="pkDetail">
+
+            <section class="imgPackage">
+                <div class="imgGal" id="imgGal"></div>
+            </section>
+
+            <section class="pkSummary">
+                <h2 class="pkTitle">Package Summary</h2>
+                <div class="pkBox" id="summaryBox"></div>
+            </section>
+
+            <section class="pkPlan">
+                <h2 class="pkTitle">Plan</h2>
+                <div id="planList"></div>
+            </section>
+
+            <div class="actionBtns">
+                <a href="../Public/allPackage.html" class="btnBack">Back</a>
+                <a href="../Public/booking.html" id="bookingLink"
+                    class="btnBooking">Booking</a>
+            </div>
+        </main>
+
+        <script>
+  const params = new URLSearchParams(window.location.search);
+  const pkgId = params.get("id");
+  if (pkgId) {
+    document.getElementById("bookingLink").href = `booking.html?package_id=${pkgId}`;
+  }
+</script>
+
+        <script
+            src="../client-script/clientdashboardJS/packagedetail.js"></script>
+    </body>
+</html>
